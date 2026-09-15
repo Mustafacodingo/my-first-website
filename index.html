@@ -3,225 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BHT | Engr. Mustafa Hadi</title>
+  <meta name="description" content="B.H.T - Bin Hadi General Trading | Engr. Mustafa Hadi" />
+  <title>B.H.T | Bin Hadi General Trading</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #f4f4f4, #eaeaea);
-      color: #111;
-      line-height: 1.6;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    header {
-      background: linear-gradient(135deg, #111, #1c1c1c);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-      border-bottom: 6px solid #f4b400;
-    }
-
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-      color: #f4b400;
-    }
-
-    header h2 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 18px;
-      color: #ddd;
-    }
-
-    .hero-card {
-      background: white;
-      margin-top: -30px;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .box {
-      background: #fafafa;
-      border-right: 5px solid #f4b400;
-      padding: 20px;
-      border-radius: 14px;
-    }
-
-    .box h3 {
-      margin-bottom: 12px;
-      color: #111;
-      font-size: 22px;
-    }
-
-    .box p, .box a {
-      font-size: 18px;
-      color: #333;
-      text-decoration: none;
-    }
-
-    .box a:hover {
-      color: #f4b400;
-    }
-
-    .section {
-      margin: 50px 0;
-    }
-
-    .section h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 30px;
-      color: #111;
-      position: relative;
-    }
-
-    .section h2::after {
-      content: "";
-      display: block;
-      width: 90px;
-      height: 4px;
-      background: #f4b400;
-      margin: 10px auto 0;
-      border-radius: 10px;
-    }
-
-    .about {
-      background: white;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .about p {
-      font-size: 18px;
-      color: #444;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      margin-top: 25px;
-    }
-
-    .btn {
-      background: #111;
-      color: white;
-      padding: 14px 24px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-size: 17px;
-      transition: 0.3s;
-      display: inline-block;
-    }
-
-    .btn:hover {
-      background: #f4b400;
-      color: #111;
-      transform: translateY(-2px);
-    }
-
-    footer {
-      margin-top: 60px;
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      border-top: 4px solid #f4b400;
-    }
-
-    footer p {
-      color: #ddd;
-      font-size: 15px;
-    }
-
-    @media (max-width: 768px) {
-      .hero-card {
-        grid-template-columns: 1fr;
-      }
-
-      header h1 {
-        font-size: 34px;
-      }
-
-      header h2 {
-        font-size: 22px;
-      }
-    }
+    :root{--gold:#f5b400;--black:#111315;--soft:#f6f7f8;--muted:#6b7280;--card:#fff}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Tahoma,sans-serif;background:linear-gradient(180deg,#fff,#f7f7f7);color:var(--black);line-height:1.7}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1120px,92%);margin:auto}
+    .hero{min-height:88vh;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 15% 15%,rgba(245,180,0,.20),transparent 28%),linear-gradient(135deg,#fff 0%,#fff 60%,#f7f7f7 100%)}
+    .hero:after{content:"";position:absolute;width:420px;height:420px;border:60px solid rgba(245,180,0,.10);border-radius:50%;left:-160px;bottom:-180px}
+    nav{position:absolute;top:0;left:0;right:0;padding:22px 0;z-index:5}
+    nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:900;font-size:24px}.brand span{color:var(--gold)}
+    .navlinks{display:flex;gap:22px;font-size:14px}.navlinks a:hover{color:var(--gold)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:120px 0 70px;position:relative;z-index:2}
+    .eyebrow{display:inline-block;background:#111;color:#fff;padding:7px 13px;border-radius:999px;font-size:13px;margin-bottom:18px}
+    h1{font-size:clamp(42px,6vw,76px);line-height:1.05;margin-bottom:16px}.gold{color:var(--gold)}
+    .lead{font-size:20px;color:#4b5563;max-width:680px;margin-bottom:28px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{padding:14px 20px;border-radius:12px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:.25s}
+    .btn.primary{background:var(--gold);color:#111}.btn.dark{background:#111;color:#fff}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,.12)}
+    .profile-card{background:rgba(255,255,255,.92);border:1px solid #ececec;border-radius:28px;padding:30px;box-shadow:0 20px 60px rgba(17,19,21,.10);backdrop-filter:blur(8px);animation:float 5s ease-in-out infinite}
+    .profile-card img.logo{width:100%;max-width:390px;display:block;margin:0 auto 20px}
+    .profile-card h2{text-align:center;font-size:28px}.profile-card .role{text-align:center;color:var(--muted);margin-bottom:22px}
+    .info{display:grid;gap:12px}.info a,.info div{background:var(--soft);padding:13px 15px;border-radius:12px;display:flex;gap:10px;align-items:center;direction:ltr;justify-content:flex-start}
+    section{padding:78px 0}.section-title{text-align:center;font-size:36px;margin-bottom:12px}.section-sub{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 34px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{background:var(--card);padding:25px;border-radius:18px;border:1px solid #eee;box-shadow:0 8px 24px rgba(0,0,0,.04);transition:.25s}.service:hover{transform:translateY(-5px);border-color:#f0c64c}.service .icon{font-size:30px;margin-bottom:12px}.service h3{margin-bottom:8px}.service p{color:var(--muted);font-size:15px}
+    .contact{background:#111;color:#fff}.contact .section-sub{color:#bbb}.contact-grid{display:grid;grid-template-columns:1fr auto;gap:34px;align-items:center;background:#191b1e;padding:30px;border-radius:24px;border:1px solid #2b2f33}.qr{width:160px;height:160px;object-fit:cover;border-radius:16px;background:#fff;padding:8px}.contact h3{font-size:28px;margin-bottom:8px}.contact p{color:#c8c8c8;margin-bottom:16px}
+    footer{background:#0b0c0d;color:#aaa;text-align:center;padding:24px;font-size:14px;border-top:1px solid #222}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @media(max-width:850px){.hero-grid,.contact-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.navlinks{display:none}.profile-card{animation:none}.qr{margin:auto}.hero{text-align:center}.lead{margin-left:auto;margin-right:auto}.actions{justify-content:center}}
   </style>
 </head>
 <body>
-
-  <header>
-    <div class="container">
-      <h1>B.H.T</h1>
-      <h2>Bin Hadi General Trading</h2>
-      <p>Professional Business Profile</p>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="hero-card">
-      <div class="box">
-        <h3>👤 المعلومات الشخصية</h3>
-        <p><strong>الاسم:</strong> Engr. Mustafa Hadi</p>
-        <p><strong>المنصب:</strong> Purchasing Manager</p>
-        <p><strong>الشركة:</strong> Bin Hadi General Trading</p>
-      </div>
-
-      <div class="box">
-        <h3>📞 معلومات التواصل</h3>
-        <p><strong>الهاتف:</strong> <a href="tel:+4915736440801">+49 157 3644 0801</a></p>
-        <p><strong>الإيميل:</strong> <a href="mailto:mustafa.m@binhadigt.com">mustafa.m@binhadigt.com</a></p>
-        <p><strong>الموقع:</strong> <a href="https://www.binhadigt.com" target="_blank">www.binhadigt.com</a></p>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>نبذة</h2>
-      <div class="about">
-        <p>
-          مرحبًا بكم، أنا <strong>Engr. Mustafa Hadi</strong>، أعمل بمنصب
-          <strong>Purchasing Manager</strong> في شركة
-          <strong>Bin Hadi General Trading</strong>.
-          هذا الموقع التعريفي يسهّل الوصول إلى معلومات التواصل والخدمات بطريقة احترافية وبسيطة.
-        </p>
-
-        <div class="actions">
-          <a class="btn" href="tel:+4915736440801">اتصال الآن</a>
-          <a class="btn" href="mailto:mustafa.m@binhadigt.com">إرسال إيميل</a>
-          <a class="btn" href="https://www.binhadigt.com" target="_blank">زيارة الموقع</a>
+  <section class="hero" id="home">
+    <nav>
+      <div class="wrap">
+        <div class="brand">B.<span>H</span>.T</div>
+        <div class="navlinks">
+          <a href="#home">الرئيسية</a><a href="#services">الخدمات</a><a href="#contact">تواصل معنا</a>
         </div>
       </div>
-    </section>
-  </main>
+    </nav>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">BIN HADI GENERAL TRADING</span>
+        <h1>حلول تجارية <span class="gold">باحتراف</span> وثقة.</h1>
+        <p class="lead">صفحة تعريفية احترافية لشركة B.H.T ومعلومات التواصل مع Engr. Mustafa Hadi — Purchasing Manager.</p>
+        <div class="actions">
+          <a class="btn primary" href="tel:+4915736440801">📞 اتصال الآن</a>
+          <a class="btn dark" href="mailto:mustafa.m@binhadigt.com">✉️ إرسال إيميل</a>
+        </div>
+      </div>
+      <div class="profile-card">
+        <img class="logo" src="assets/bht-logo.png" alt="BHT Bin Hadi General Trading" />
+        <h2>Engr. Mustafa Hadi</h2>
+        <div class="role">Purchasing Manager</div>
+        <div class="info">
+          <a href="tel:+4915736440801">📞 +49 157 3644 0801</a>
+          <a href="mailto:mustafa.m@binhadigt.com">✉️ mustafa.m@binhadigt.com</a>
+          <a href="https://www.binhadigt.com" target="_blank" rel="noopener">🌐 www.binhadigt.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2026 B.H.T - Bin Hadi General Trading. All Rights Reserved.</p>
-  </footer>
+  <section id="services">
+    <div class="wrap">
+      <h2 class="section-title">خدماتنا</h2>
+      <p class="section-sub">هذه أمثلة أولية، ونقدر نبدلها لاحقًا بخدمات الشركة الفعلية بالضبط.</p>
+      <div class="cards">
+        <div class="service"><div class="icon">📦</div><h3>التوريد</h3><p>تنسيق احتياجات التوريد والمشتريات بطريقة منظمة واحترافية.</p></div>
+        <div class="service"><div class="icon">🤝</div><h3>التجارة العامة</h3><p>دعم الصفقات والعلاقات التجارية مع الموردين والعملاء.</p></div>
+        <div class="service"><div class="icon">🌍</div><h3>شبكة أعمال</h3><p>تواصل سريع وواضح لتسهيل فرص الأعمال والتعاون التجاري.</p></div>
+      </div>
+    </div>
+  </section>
 
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2 class="section-title">تواصل معنا</h2>
+      <p class="section-sub">يمكنك الاتصال أو إرسال بريد إلكتروني أو مسح رمز QR.</p>
+      <div class="contact-grid">
+        <div>
+          <h3>جاهزون للتواصل</h3>
+          <p>B.H.T — Bin Hadi General Trading</p>
+          <div class="actions">
+            <a class="btn primary" href="tel:+4915736440801">اتصال</a>
+            <a class="btn dark" href="mailto:mustafa.m@binhadigt.com">Email</a>
+            <a class="btn dark" href="https://www.binhadigt.com" target="_blank" rel="noopener">Website</a>
+          </div>
+        </div>
+        <img class="qr" src="assets/qr.png" alt="QR Code" />
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2026 B.H.T — Bin Hadi General Trading</footer>
 </body>
 </html>
